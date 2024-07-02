@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta etiquetas necesarias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <title>Catálogo de Deportes</title>
+    <style>
+        .navbar {
+          background-color: #4781d8;
+        }
+        .navbar a {
+          color: white !important;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">
+        <!-- Logo de la empresa -->
+        <img src="{{ url_for('static', filename='img/LOGOTURISMO.png') }}" alt="Logo" width="30" height="30">
+        Sur Extremo
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <!-- Enlaces de la barra de navegación centrada -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('register') }}">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('suggestions') }}">Sugerencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('catalog') }}">Catálogo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+      <h1>Catálogo de Deportes de Turismo Aventura</h1>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <!-- Imagen del deporte -->
+            <img class="card-img-top" src="{{ url_for('static', filename='img/RAFTING.jpeg') }}" alt="Rafting">
+            <div class="card-body">
+              <h5 class="card-title">Rafting en Pucon</h5>
+              <p class="card-text">Disfruta de una emocionante experiencia de rafting. Precio: $100.000 CLP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <!-- Imagen del deporte -->
+            <img class="card-img-top" src="{{ url_for('static', filename='img/TREKKING.jpg') }}" alt="Trekking">
+            <div class="card-body">
+              <h5 class="card-title">Trekking en Familia</h5>
+              <p class="card-text">Explora senderos y disfruta de la naturaleza con nuestro trekking guiado. Precio: $80.000 CLP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <!-- Imagen del deporte -->
+            <img class="card-img-top" src="{{ url_for('static', filename='img/CORRALCO.jpg') }}" alt="Ski y Snowboard">
+            <div class="card-body">
+              <h5 class="card-title">Ski y Snowboard en Corralco</h5>
+              <p class="card-text">Practica ski y snowboard. Precio: $150.000 CLP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer mt-5">
+      <div class="container text-center">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <!-- Iconos de redes sociales -->
+        <div class="social-icons">
+          <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Sur Extremo. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <style>
+      .footer {
+        background-color: #4781d8;
+      }
+      .footer p, .footer a {
+        color: white !important;
+      }
+    
